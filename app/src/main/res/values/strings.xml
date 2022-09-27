@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Seccion243</string>
+    <string name="main_Titulo">Acceso Usuarios</string>
+    <string name="main_Username">Ingresa tu Email</string>
+    <string name="main_Password">Ingresa tu Clave</string>
+    <string name="main_Boton">Acceder</string>
+</resources>
