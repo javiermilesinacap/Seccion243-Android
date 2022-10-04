@@ -1,9 +1,11 @@
 package com.example.seccion243
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -18,5 +20,11 @@ class MainActivity : AppCompatActivity() {
         Log.w("Titulo","Mensaje Warning"+edad)
         Log.d("Titulo","Mensaje debug"+edad)
         Toast.makeText(this,"El mensaje",Toast.LENGTH_LONG).show()
+        val cajaUsuario : EditText = findViewById(R.id.main_txtUsuario)
+        if(cajaUsuario.text.equals("admin")){
+            Log.d("Titulo","entra el usuario"+edad)
+            val intento : Intent = Intent(this,MenuActivity::class.java)
+            startActivity(intento)
+        }
     }
 }
