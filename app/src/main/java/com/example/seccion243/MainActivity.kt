@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("Titulo","Mensaje debug"+edad)
         Toast.makeText(this,"El mensaje",Toast.LENGTH_LONG).show()
         val cajaUsuario : EditText = findViewById(R.id.main_txtUsuario)
-        if(cajaUsuario.text.equals("admin")){
+        if(cajaUsuario.text.toString().equals("admin")){
             Log.d("Titulo","entra el usuario"+edad)
             val intento : Intent = Intent(this,MenuActivity::class.java)
             startActivity(intento)
