@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun BotonClick(v : View){
         var edad=22
+
         Log.i("Titulo","Mensaje Info"+edad)
         Log.e("Titulo","Mensaje Error"+edad)
         Log.w("Titulo","Mensaje Warning"+edad)
