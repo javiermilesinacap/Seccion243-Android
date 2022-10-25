@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.seccion243.Database.DB
 import com.example.seccion243.Models.Producto
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         val producto = Producto("Cocacola", 22)
         val mibase = DB(this,null,null, null)
         mibase.addProducto(producto)
+
+        // Write a message to the database
+        val database = Firebase.database
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello, World!")
+
     }
     fun BotonClick(v : View){
         var edad=22
